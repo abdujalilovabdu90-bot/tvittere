@@ -7,10 +7,15 @@ import img3 from "../../assets/4.svg";
 
 function Tvitter() {
   const [form, setForm] = useState({
-    username: "",
-    password: "",
-    email: '',
-    number: '',
+    name: "",
+    phonenumber: "",
+    email: "",
+    date: "",
+  });
+
+  const [forn, setForn] = useState({
+    inpname: "",
+    kod: "",
   });
 
   const handleSubmit = (e) => {
@@ -67,18 +72,18 @@ function Tvitter() {
                     <div className="ota3">
                       <input
                         className="inp"
-                        name="username"
+                        name="inpname"
                         type="text"
                         placeholder="Phone number, email address"
-                        value={form.username}
+                        value={forn.username}
                         onChange={handleChange}
                       />
                       <input
                         className="inp"
-                        name="password"
+                        name="kod"
                         type="text"
                         placeholder="Password"
-                        value={form.password}
+                        value={forn.password}
                         onChange={handleChange}
                       />
                       <button className="btn1" type="submit">
@@ -108,34 +113,34 @@ function Tvitter() {
                     <div className="ota3">
                       <input
                         className="inp2"
-                        name="username"
+                        name="name"
                         type="text"
                         placeholder="Name"
-                        value={form.username}
+                        value={form.name}
                         onChange={handleChange}
                       />
                       <input
                         className="inp2"
-                        name="password"
+                        name="phone number"
                         type="text"
-                        placeholder="Phone number"
-                        value={form.password}
-                        onChange={handleChange}
-                      />
-                      <input
-                        className="inp2"
-                        name="number"
-                        type="email"
-                        placeholder="Email"
-                        value={form.number}
+                        placeholder="Phonenumber"
+                        value={form.Phonenumber}
                         onChange={handleChange}
                       />
                       <input
                         className="inp2"
                         name="email"
+                        type="email"
+                        placeholder="Email"
+                        value={form.email}
+                        onChange={handleChange}
+                      />
+                      <input
+                        className="inp2"
+                        name="date"
                         type="text"
                         placeholder="Date of birth "
-                        value={form.email}
+                        value={form.date}
                         onChange={handleChange}
                       />
                       <button className="btn1" type="submit">
@@ -150,13 +155,13 @@ function Tvitter() {
             <div className="btn_box">
               <button className="btn">
                 <img src={img2} alt="" />
-                <p onClick={() => setLog(true)}>Sign up with Google</p>
+                <p >Sign up with Google</p>
               </button>
               <button className="btn">
                 <img src={img3} alt="" />
                 <p>Sign up with Apple</p>
               </button>
-              <button className="btn">Sign up with phone or email</button>
+              <button onClick={() => setLog(true)} className="btn">Sign up with phone or email</button>
             </div>
             <br />
             <p className="p">
